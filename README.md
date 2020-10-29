@@ -67,5 +67,5 @@ Non-functional requirements (bonus points):
 - The Sorting order (ascending/descending) is persistent across all sorting options; i.e. If you are sorting by beneficiary ASC and switch the sorting option to Amount, the sorting order should stay ASC
 - i18n: We can find the option for languages ( En | Es) in the navbar
 - Remote repository: https://github.com/japocesar/assesment.git
-- Github Pages: https://japocesar.github.io/assesment/home
+- Github Pages: https://japocesar.github.io/assesment/
     - I couldn't fix the path for i18 :(
