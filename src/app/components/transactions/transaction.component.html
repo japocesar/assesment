@@ -1,0 +1,13 @@
+ <div class="transaction-container" [ngStyle]="{'border-left-color': transaction.categoryCode}">
+    <div class="col-1">
+        {{transaction.dates.valueDate | date:'MMM d' }}
+    </div>
+    <div class="col-8 merchant-container">
+        <div><img [src]="transaction.merchant.name | logo" /></div>
+        <div>
+            <div class="merchant-title">{{transaction.merchant.name }}</div>
+            <div>{{transaction.transaction.type | translate}}</div>
+        </div>
+    </div>
+    <div class="col-3 amount-container">{{transaction.transaction.amountCurrency.amount | currency:'EUR' }}</div>
+</div>

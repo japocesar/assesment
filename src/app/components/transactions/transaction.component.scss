@@ -1,0 +1,33 @@
+.transaction-container {
+    align-items: center;
+    border: 1px solid gray;
+    border-width: 0px 1px 1px 10px;
+    display: flex;
+
+    &:first-child {
+        border-top-width: 1px;
+    }
+}
+
+.amount-container {
+    text-align: right;
+}
+
+.merchant-container{
+    align-items: center;
+    display: flex;
+    padding: 0px !important;
+
+    .merchant-title {
+        font-weight: bold;
+    }
+
+    div {
+        padding: 0px !important;
+    }
+
+    img {
+        max-height: 50px;
+        margin-right: 30px;
+    }
+}

@@ -1,3 +1,7 @@
+# Requirements
+1. Angular CLI: https://github.com/angular/angular-cli
+2. NodeJS: https://nodejs.org/es/
+
 # Assesment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
@@ -6,22 +10,54 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Functional Requirements
 
-## Build
+### Transfer Money
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The user is be able to transfer money using the Transfer Money form.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+As a user I should be able to:
 
-## Running end-to-end tests
+1. The "FROM ACCOUNT" field is pre-filled with account information - (account type, id, and balance)
+2. When user press on Submit button the form is disabled and the Transfer button appears.
+3. When user press "Transfer" on the preview screen:
+    - The new transfer is pushed to the transactions list
+    - The balance in the "FROM ACCOUNT" field is updated
+    - A confirmation message is displayed
+    - The form is reset
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Non-functional requirements:
 
-## Further help
+- Form is reset to its initial state after the transfer has been completed successfully
+- A user is not able to transfer an amount greater than the balance
+- If form is invalid the Submit button is disabled
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Transaction History
+
+User is able to view recent transactions in an ordered list.
+
+User is able to search the recent transactions by typing a merchant name in the search field.
+
+User is able to sort by recent transactions by Date, Amount and Beneficiary by clicking the corresponding sorting action.
+
+---
+
+As a user I should be able to:
+
+1. View a list of my recent transactions.
+2. See the transactions list updated with the new transaction when a new money transfer has taken place.
+3. Filter by merchant name the transactions list
+    - The transactions list should update immediately at every keystroke
+    - If there is no results a message is shown
+4. Clear the filter by clicking an 'x' icon in the Search field.
+4. Sort (ascending/descending) the transactions list by Date, Beneficiary and Amount.
+
+Non-functional requirements (bonus points):
+
+- The Sorting order (ascending/descending) is persistent across all sorting options; i.e. If you are sorting by beneficiary ASC and switch the sorting option to Amount, the sorting order should stay ASC
+- i18n: We can find the option for languages ( En | Es) in the navbar
+- Remote repository
+- deploy to a static hosting platform of your choice; i.e. Netlify, Firebase, Vercel, Github pages or Heroku

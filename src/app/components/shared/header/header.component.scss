@@ -1,0 +1,14 @@
+.header {
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    align-items: center;
+
+    svg {
+        fill: white;
+    }
+
+    .title {
+        margin: 0 auto;
+    }
+}

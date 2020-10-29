@@ -1,0 +1,38 @@
+<div class="section">
+    <app-header title="{{title}}"></app-header>
+
+    <div class="container filters-container">
+        <div class="col-5">
+            <input class="search-box" type="text" [(ngModel)]="filter" (ngModelChange)="handleFilter($event)" placeholder="{{ 'merchantName' | translate }}">
+            <button class="close-icon" type="reset" (click)="clearFilter()" *ngIf="(filter != '')"></button>
+            
+        </div>
+        <div class="col-7 sort-container">
+            <div>{{ 'sortBy' | translate }}</div>
+            <ul>
+                <li (click)="handleSort('date')" [ngClass]=" getClass('date') ">
+                    {{ 'date' | translate }}
+                    <i class="sort-by-desc" *ngIf="!asc && order.includes('date')"></i>
+                    <i class="sort-by-asc" *ngIf="asc && order.includes('date')"></i>
+                </li>
+                <li (click)="handleSort('merchant')" [ngClass]=" getClass('merchant') ">
+                    {{ 'beneficiary' | translate }}
+                    <i class="sort-by-desc" *ngIf="!asc && order.includes('merchant')"></i>
+                    <i class="sort-by-asc" *ngIf="asc && order.includes('merchant')"></i>
+                </li>
+                <li (click)="handleSort('amount')" [ngClass]=" getClass('amount') ">
+                    {{ 'amount' | translate | titlecase }}
+                    <i class="sort-by-desc" *ngIf="!asc && order.includes('amount')"></i>
+                    <i class="sort-by-asc" *ngIf="asc && order.includes('amount')"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container history-container">
+        <h1 *ngIf="(transactions.length <= 0)">No Results</h1>
+        <div class="p-0" *ngFor="let t of transactions">
+            <app-transaction [transaction]="t"></app-transaction>
+        </div>
+    </div>
+</div>

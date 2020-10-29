@@ -1,0 +1,22 @@
+nav {
+    background-color: white;
+    border-bottom: 3px solid var(--orange);
+    padding: 20px 0;
+    width: 100%;
+
+    img {
+        max-width: 30vw;
+    }
+
+    .navbar-text {
+        float: right;
+
+        span {
+            cursor: pointer;
+
+            &.active {
+                color: var(--orange);
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.success-msg {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: green;
+}
+
+.has-danger {
+    input {
+        border-color: red; 
+    }
+}
+
+input, select {
+    border-width: 0 0 1px 0;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    width: calc(100% - 10px);
+
+    &.ng-invalid {
+        border-color: red;
+    }
+
+    &:focus {
+        outline: unset;
+    }
+}
+
+.text-danger {
+    color: red;
+    padding: 0px !important;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.button-container {
+    padding: 0;
+    height: 35px;
+
+    button {
+        background-color: var(--orange);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        float: right;
+        padding: 8px;
+        width: 50%;
+
+        &.submit-button {
+            background-color: white;
+            color: var(--orange);
+            border: 2px solid var(--orange);
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+}

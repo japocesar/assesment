@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --orange: #ff7738;
+    --blue: #0c8297;
+}
+
+
+ // Extra small devices (portrait phones, less than 576px)
+ @media (max-width: 575.98px) {
+     body {
+         height: 100vh;
+
+         .container {
+             padding: 0px !important;
+         }
+         
+         .col-3, .col-9 {
+             width: 100% !important;
+             padding: 0px !important;
+             margin-bottom: 30px;
+         }
+     }
+}
+
+body {
+    background-image: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'custom_font';
+    margin: 0px !important;
+
+    .col-1 {
+        width: 8.333333333333333%;
+    }
+
+    .col-2 {
+        width: 16.66666666666667%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-5 {
+        width: 41.66666666666667%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33333333333333%;
+    }
+
+    .col-8 {
+        width: 66.66666666666667%;
+    }
+    
+    .col-9 {
+        width: calc(  75% - 40px );
+        padding-left: 40px;
+    }
+
+    .container {
+        padding: 0 70px;
+    }
+
+    .mt-5 {
+        margin-top: 50px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .section {
+        background-color: white;
+
+        div {
+            padding: 12px;
+        }
+    }
+}

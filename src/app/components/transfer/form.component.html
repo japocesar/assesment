@@ -1,0 +1,36 @@
+<div class="success-msg" *ngIf="success">
+    Transfer done!
+</div>
+<form #f="ngForm" (ngSubmit)="save(f)" novalidate="">
+    <div class="form-group">
+        <label for="fromAccount">{{ 'fromAccount' | translate }}</label>
+        <input type="text"
+            disabled
+            id="fromAccount"
+            name="fromAccount"
+            class="form-control"
+            value="{{ accountDetail }} {{ account.balance | currency:'EUR' }}"
+        >
+    </div>
+
+    <div [ngClass]="{'has-danger': inputToAccount.errors?.required}">
+        <label for="toAccount">{{ 'toAccount' | translate }}</label>
+        <select [disabled]="confirm" name="toAccount" id="toAccount" [(ngModel)]="toAccount" class="form-control" required #inputToAccount="ngModel">
+            <option *ngFor="let merchant of merchants" value="{{merchant}}">{{ merchant }}</option>
+        </select>
+        <div class="text-danger" *ngIf="inputToAccount.errors?.required && inputToAccount.touched"> {{ 'requiredError' | translate }} </div>
+    </div>
+    
+
+    <div [ngClass]="{'has-danger': inputAmount.errors?.required || balanceError}">
+        <label for="amount">{{ 'amount' | translate }}</label>
+        <input [disabled]="confirm" class="form-control" type="number" id="amount" [(ngModel)]="amount" name="amount" [value]="amount" required #inputAmount="ngModel">
+        <div class="text-danger" *ngIf="inputAmount.errors?.required && inputAmount.touched"> {{ 'requiredError' | translate }}</div>
+        <div class="text-danger" *ngIf="balanceError"> {{ 'balanceError' | translate }} </div>
+    </div>
+
+    <div class="button-container">
+        <button class="submit-button" *ngIf="!confirm" type="button" (click)="handleConfirm()" [disabled]="f.invalid">{{ 'submit' | translate }}</button>
+        <button *ngIf="confirm" type="submit">{{ 'transfer' | translate }}</button>
+    </div>
+  </form>
