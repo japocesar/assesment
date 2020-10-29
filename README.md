@@ -6,6 +6,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
+# Clone repo
+git clone https://github.com/japocesar/assesment.git
+
+# Install dependencies
+In command propmt go to project folder and run
+    - npm install
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -59,5 +66,6 @@ Non-functional requirements (bonus points):
 
 - The Sorting order (ascending/descending) is persistent across all sorting options; i.e. If you are sorting by beneficiary ASC and switch the sorting option to Amount, the sorting order should stay ASC
 - i18n: We can find the option for languages ( En | Es) in the navbar
-- Remote repository
-- deploy to a static hosting platform of your choice; i.e. Netlify, Firebase, Vercel, Github pages or Heroku
+- Remote repository: https://github.com/japocesar/assesment.git
+- Github Pages: https://japocesar.github.io/assesment/home
+    - I couldn't fix the path for i18 :(
