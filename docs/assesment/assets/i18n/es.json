@@ -1,0 +1,23 @@
+{
+    "fromAccount": "CUENTA DE ORIGEN",
+    "toAccount": "CUENTA DE DESTINO",
+    "amount": "CANTIDAD",
+    "submit": "ENVIAR",
+    "transfer": "TRANSFERIR",
+    "requiredError": "Este campo es obligatorio",
+    "balanceError": "La cantidad no debe ser mayor al saldo",
+
+    "makeATransfer": "Realizar Transferencia",
+    "recentTransactions": "Transferencias recientes",
+
+    "merchantName": "Nombre del Negocio",
+    "sortBy": "Ordenar por",
+
+    "Salaries": "Sueldos",
+    "Card Payment": "Pago de Tarjeta",
+    "Online Transfer": "Transferencia en línea",
+    "Transaction": "Negocio",
+
+    "date": "Fecha",
+    "beneficiary": "Beneficiario"
+}

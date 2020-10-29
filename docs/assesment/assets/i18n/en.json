@@ -1,0 +1,23 @@
+{
+    "fromAccount": "FROM ACCOUNT",
+    "toAccount": "TO ACCOUNT",
+    "amount": "AMOUNT",
+    "submit": "SUBMIT",
+    "transfer": "TRANSFER",
+    "requiredError": "This field is required",
+    "balanceError": "Amount can't be more than your account balance",
+
+    "makeATransfer": "Make a Transfer",
+    "recentTransactions": "Recent Transactions",
+
+    "merchantName": "Merchant Name",
+    "sortBy": "Sort By",
+
+    "Salaries": "Salaries",
+    "Card Payment": "Card Payment",
+    "Online Transfer": "Online Transfer",
+    "Transaction": "Transaction",
+
+    "date": "Date",
+    "beneficiary": "Beneficiary"
+}
