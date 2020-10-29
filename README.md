@@ -11,7 +11,7 @@ git clone https://github.com/japocesar/assesment.git
 
 # Install dependencies
 In command propmt go to project folder and run
-    - npm install
+- npm install
 
 ## Development server
 
